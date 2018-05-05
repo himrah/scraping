@@ -19,7 +19,7 @@ class SC:
 			content=soup.find_all('div',attrs={'id':'g_st_container'})
 			if(content):
 			 for j in content:
-			     temp=re.search('(a-zA-Z0-9_|\w+).@(\w+).(\w+)',str(j))
+			     #temp=re.search('(a-zA-Z0-9_|\w+).@(\w+).(\w+)',str(j))
 			     if(temp):
 			         temp=temp.group(0)
 			         row.writerow([temp,i])
@@ -28,3 +28,4 @@ class SC:
 			#num+=1d
 			print(i+' : '+str(num))
 			num+=1
+	#email re.search('(a-zA-Z0-9_|\w+).@(\S+)',str(j)).group(0
